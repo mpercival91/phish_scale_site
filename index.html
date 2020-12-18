@@ -1,0 +1,197 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Phish Scale</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory  -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script data-ad-client="ca-pub-3653355720032076" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+
+<body>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dropzone.js"></script>
+
+
+  <!-- Title Bar  -->
+  <div class="row">
+    <span class="title-bar">
+    <h1>Phish Scale</h1>
+    </span>
+  </div>
+
+  <!-- Results -->
+  <div class="row">
+    <div class="column">
+      <div class="cue-count-results" id="result-cue-count">
+        <b>Cue Score:</b> <br/>
+          <div class="cue-count-results-value" id="result-cue-count-value">
+            <!-- result to be populated here-->
+          </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="premise-allignment-results" id="result-premise-alignment">
+        <b>Premise Score:</b> <br/>
+          <div class="premise-allignment-results-value" id="result-premise-alignment-value">
+            <!-- result to be populated here-->
+          </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="difficulty-results" id="result-difficulty">
+        <b>Difficulty:</b> <br/>
+          <div class="difficulty-results-value" id="result-difficulty-value">
+            <!-- result to be populated here-->
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content  -->
+  <div class="row">
+      <div class="column-large">
+          <div class="emailview" id="emailview">
+          <img class="emailviewer" id="emailviewer" src="#"/>
+          <input type="file" id="email_upload" accept="image/gif, image/jpeg, image/png" multiple="false"/>
+          </div>
+      </div>
+
+      <!-- column for spacing purposes -->
+      <div class="column-spacer">
+      </div>
+
+    <div class="column">
+      <div class="premise-calculator">
+        <b>Premise Alignment</b>
+		
+          <!-- Premise Alignment Asessment point 1 -->
+          <p>
+          Mimics a workplace process or practice for the target audience.<br/>
+          <select id="premise_alignment_assessment_point_1">
+            <option></option>
+            <option>Extreme applicability, alignment, or relevancy</option>
+            <option>Significant applicability, alignment, or relevancy</option>
+            <option>Moderate applicability, alignment, or relevancy</option>
+            <option>Low applicability, alignment, or relevancy</option>
+            <option>Not applicable, no alignment, or no relevancy</option>
+          </select>
+          </p>
+          
+          <!-- Premise Alignment Asessment point 2 -->
+          <p>
+          Has workplace relevance for the target audience.<br/>
+          <select id="premise_alignment_assessment_point_2">
+            <option></option>
+            <option>Extreme applicability, alignment, or relevancy</option>
+            <option>Significant applicability, alignment, or relevancy</option>
+            <option>Moderate applicability, alignment, or relevancy</option>
+            <option>Low applicability, alignment, or relevancy</option>
+            <option>Not applicable, no alignment, or no relevancy</option>
+          </select>
+          </p>
+          
+          <!-- Premise Alignment Asessment point 3 -->
+          <p>
+          Aligns with other situations or events, including external to the workplace.<br/>
+          <select id="premise_alignment_assessment_point_3">
+            <option></option>
+            <option>Extreme applicability, alignment, or relevancy</option>
+            <option>Significant applicability, alignment, or relevancy</option>
+            <option>Moderate applicability, alignment, or relevancy</option>
+            <option>Low applicability, alignment, or relevancy</option>
+            <option>Not applicable, no alignment, or no relevancy</option>
+          </select>
+          </p>
+
+          <!-- Premise Alignment Asessment point 4 -->
+          <p>
+          Suggests or infers concern over consequences for NOT clicking for the target audience.<br/>
+          <select id="premise_alignment_assessment_point_4">
+            <option></option>
+            <option>Extreme applicability, alignment, or relevancy</option>
+            <option>Significant applicability, alignment, or relevancy</option>
+            <option>Moderate applicability, alignment, or relevancy</option>
+            <option>Low applicability, alignment, or relevancy</option>
+            <option>Not applicable, no alignment, or no relevancy</option>
+          </select>
+          </p>		
+
+          <!--Premise Alignment Asessment point 5 -->
+          <p>
+          Target has been the subject of targeted training, specific warnings, or other exposure.<br/>
+          <select id="premise_alignment_assessment_point_5">
+            <option></option>
+            <option>Extreme applicability, alignment, or relevancy</option>
+            <option>Significant applicability, alignment, or relevancy</option>
+            <option>Moderate applicability, alignment, or relevancy</option>
+            <option>Low applicability, alignment, or relevancy</option>
+            <option>Not applicable, no alignment, or no relevancy</option>
+          </select>
+          </p>		
+        </div>
+          <!-- Cues selectors -->
+          <div class="row">
+            <div class="cue-calculator">
+            <p>
+              <b>Observed Cues</b></br>
+            <input type="checkbox" id="cue1">&nbsp<span class="tooltip">Spelling and grammar irregularities <br/> <span class="tooltiptext"> Does the message contain spelling or grammar errors, including mismatched lurality?</span></span><br/>
+            <input type="checkbox" id="cue2">&nbsp<span class="tooltip"> Inconsistency <br/> <span class="tooltiptext">Are there inconsistencies contained in the email message?</span></span><br/>
+            <input type="checkbox" id="cue3">&nbsp<span class="tooltip"> Attachment type <br/> <span class="tooltiptext"> Is there a potentially dangerous attachment?</span></span><br/>
+            <input type="checkbox" id="cue4">&nbsp<span class="tooltip"> Sender display name and email address <br/> <span class="tooltiptext">Does a display name hide the real sender?</span></span><br/>
+            <input type="checkbox" id="cue5">&nbsp<span class="tooltip"> URL hyperlinking <br/> <span class="tooltiptext">Is there text that hides the true URL in a hyperlink?</span></span><br/>
+            <input type="checkbox" id="cue6">&nbsp<span class="tooltip"> Domain spoofing <br/> <span class="tooltiptext"> Is a domain name used in addresses or links plausibly similar to a legitimate entity’s domain?</span></span><br/>
+            <input type="checkbox" id="cue7">&nbsp<span class="tooltip"> No/minimal branding and logos <br/> <span class="tooltiptext">Is appropriate branding missing?</span></span><br/>
+            <input type="checkbox" id="cue8">&nbsp<span class="tooltip"> Logo imitation or out-ofdate branding/logos <br/> <span class="tooltiptext"> Do any branding elements appear to be an imitation or out-ofdate?</span></span><br/>
+            <input type="checkbox" id="cue9">&nbsp<span class="tooltip"> Unprofessional looking design or formatting <br/> <span class="tooltiptext">Does the design and formatting violate any conventional professional practices?</span></span><br/>
+            <input type="checkbox" id="cue10">&nbsp<span class="tooltip"> Legal language/copyright info/disclaimers <br/> <span class="tooltiptext"> Are any inappropriate security indicators or icons present?</span></span><br/>
+            <input type="checkbox" id="cue11">&nbsp<span class="tooltip"> Distracting detail <br/> <span class="tooltiptext">Does the message contain any detailed aspects that are not central to the content?</span></span><br/>
+            <input type="checkbox" id="cue12">&nbsp<span class="tooltip"> Requests for sensitive information <br/> <span class="tooltiptext"> Does the message contain a request for any sensitive information, including personally identifying information or credentials?</span></span><br/>
+            <input type="checkbox" id="cue13">&nbsp<span class="tooltip"> Sense of urgency <br/> <span class="tooltiptext">Does the message contain time pressure, including implied?</span></span><br/>
+            <input type="checkbox" id="cue14">&nbsp<span class="tooltip"> Threatening language <br/> <span class="tooltiptext">Does the message contain a threat, including an implied threat?</span></span><br/>
+            <input type="checkbox" id="cue15">&nbsp<span class="tooltip"> Generic greeting <br/> <span class="tooltiptext">Does the message lack a greeting or lack personalization in the message?</span></span><br/>
+            <input type="checkbox" id="cue16">&nbsp<span class="tooltip"> Lack of signer details <br/> <span class="tooltiptext"> Does the message lack detail about the sender, such as contact information?</span></span><br/>
+            <input type="checkbox" id="cue17">&nbsp<span class="tooltip"> Humanitarian appeals <br/> <span class="tooltiptext">Does the message make an appeal to help others?</span></span><br/>
+            <input type="checkbox" id="cue18">&nbsp<span class="tooltip"> Too good to be true offers <br/> <span class="tooltiptext">Does the message offer anything that is too good to be true, such having won a contest, lottery, free vacation and so on?</span></span><br/>
+            <input type="checkbox" id="cue19">&nbsp<span class="tooltip"> You’re special <br/> <span class="tooltiptext">Does the message offer anything just for you?</span></span><br/>
+            <input type="checkbox" id="cue20">&nbsp<span class="tooltip"> Limited time offer <br/> <span class="tooltiptext">Does the message offer anything for a limited time?</span></span><br/>
+            <input type="checkbox" id="cue21">&nbsp<span class="tooltip"> Mimics a work or business process <br/> <span class="tooltiptext">Does the message appear to be a work or business-related process?</span></span><br/>
+            <input type="checkbox" id="cue22">&nbsp<span class="tooltip"> Poses as friend, colleague, authority figure <br/> <span class="tooltiptext">Does the message appear to be from a friend, colleague, boss or other authority entity?</span></span><br/>
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
