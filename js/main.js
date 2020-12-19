@@ -3,9 +3,6 @@
  * See LICENSE in the project root for license information.
  */
 
-// import the email parser
-import MsgReader from '@kenjiuno/msgreader';
-import * as fs from 'fs'
 
 //colour definitions
 var pastle_green = "linear-gradient(rgb(120, 222, 129) , rgb(108, 199, 115)"
@@ -15,11 +12,6 @@ var pastle_red = "linear-gradient(rgb(255, 100, 100) , rgb(245, 90, 90)"
 //Add listners after load
 window.onload=function(){
 document.getElementById('email_upload').addEventListener('change', loadImageFileAsURL);
-let dropArea = document.getElementById('emailview')
-  dropArea.addEventListener('dragenter', handlerFunction, false)
-  dropArea.addEventListener('dragleave', handlerFunction, false)
-  dropArea.addEventListener('dragover', handlerFunction, false)
-  dropArea.addEventListener('drop', loadDroppedImageFileAsURL, false)
 
 //listeners for changes to selectors to recalculate within interaction 
 document.getElementById ("cue1").addEventListener ('change', calculate);
