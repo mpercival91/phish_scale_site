@@ -203,7 +203,7 @@ function calculate() {
 	switch (true){
 	   case (final_cue_score <= 0):
             var final_cue_score_text = "No Cues";
-            var final_cue_score_colour = pastle_green;
+            var final_cue_score_colour = pastle_red;
 			break;		
 	   case (final_cue_score <= 8):
             var final_cue_score_text = "Few";

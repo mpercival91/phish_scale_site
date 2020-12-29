@@ -12,6 +12,8 @@
    ========================================================================== */
 
 html {
+  overflow-y: scroll; 
+  overflow-x:hidden;
   color: #222;
   font-size: 1em;
   line-height: 1.4;
@@ -19,22 +21,11 @@ html {
   background-color: rgb(240, 245, 245); /* For browsers that do not support gradients */
   background-image: linear-gradient(rgb(240, 245, 245), rgb(240, 245, 245));
   max-width: 1400px;
-  position: fixed;
-  top: 50%;
+  position: absolute;
   left: 50%;
-  /* bring your own prefixes */
+  top: 50%;
   transform: translate(-50%, -50%);
 }
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -289,6 +280,13 @@ textarea {
   margin-right: 20px;
 }
 
+.column-small {
+  flex: 5%;
+  border-collapse: separate;
+  margin-left: 20px;
+  margin-right: 0px;
+}
+
 .column-spacer {
   flex: 0%;
   border-collapse: separate;
@@ -333,8 +331,8 @@ textarea {
   padding-right: 5px 0;
   min-width: 600px;
   max-width: 600px;
-  min-height: 970px;
-  max-height: 970px;
+  min-height: 995px;
+  max-height: 995px;
   border-radius: 8px;
   border-color: transparent;
 }
@@ -342,31 +340,48 @@ textarea {
 .premise-calculator {
   min-width: 100%;
   max-width: 100%;
-  min-height: 450px;
-  max-height: 450px;
+  min-height: 445px;
+  max-height: 445px;
   border-radius: 8px;
   background: white;
-  padding-left: 10px;
+  padding-left: 15px;
+  padding-top: 10px;
   box-shadow: 0 1px 10px rgba(0,0,0,0.3)
 }
 
 .cue-calculator {
   min-width: 100%;
   max-width: 100%;
-  min-height: 400px;
+  min-height: 380px;
   max-height: 1024px;
+  border-radius: 8px;
+  background: white;
+  padding-left: 15px;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.3)
+}
+
+.title-bar{
+  min-width: 160px;
+  max-width: 160px;
+  min-height: 160px;
+  max-height: 160px;
   border-radius: 8px;
   background: white;
   padding-left: 10px;
   box-shadow: 0 1px 10px rgba(0,0,0,0.3)
 }
 
-.title-bar{
-  width: 100%;
-  text-align: center;
-  background-color: white;
+.about {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 160px;
+  max-height: 160px;
+  border-radius: 8px;
+  background: white;
+  padding-left: 10px;
   box-shadow: 0 1px 10px rgba(0,0,0,0.3)
 }
+
 
 .cue-count-results {
   min-width: 100%;
@@ -435,3 +450,10 @@ textarea {
   font-size: 20pt;
   font-weight: bold;
 }
+
+.header-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

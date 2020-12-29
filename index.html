@@ -32,12 +32,24 @@
   <script src="js/main.js"></script>
   <script src="js/dropzone.js"></script>
 
-
+  <div class="top-spacer"></div>
   <!-- Title Bar  -->
   <div class="row">
-    <span class="title-bar">
-    <h1>Phish Scale</h1>
-    </span>
+	  <div class="column-small">
+		<div class="title-bar">
+		<img class="header-image" src="img/header_extra_small.jpg"></img>
+		</div>
+	  </div>
+	  <div class="column-large">
+		<div class="about">
+		<b>About</b> <br/>
+		The Phish Scale is the result of <a href="https://academic.oup.com/cybersecurity/article/6/1/tyaa009/5905453">Research</a> conducted by NIST researchers Michelle P. Steves, Kristen Greene and Mary Theofanos which aims
+		to factor difficulty into the analysis of phishing email detectability. The below calculator was built by <a href="https://uk.linkedin.com/in/michael-percival-04b73539">Michael Percival</a> as a proof of
+		concept to put this research into practice. The intention of this site to provide others with the means to use the Phish Scale and further
+		refine the Phish Scale concept. This site runs purely in HTML, CSS and JS with no server side code therefore any uploaded images are not stored.
+		</div>
+	  </div>
+	
   </div>
 
   <!-- Results -->
@@ -47,6 +59,7 @@
         <b>Cue Score:</b> <br/>
           <div class="cue-count-results-value" id="result-cue-count-value">
             <!-- result to be populated here-->
+			Awaiting Input...
           </div>
       </div>
     </div>
@@ -55,6 +68,7 @@
         <b>Premise Score:</b> <br/>
           <div class="premise-allignment-results-value" id="result-premise-alignment-value">
             <!-- result to be populated here-->
+			Awaiting Input...
           </div>
       </div>
     </div>
@@ -63,6 +77,7 @@
         <b>Difficulty:</b> <br/>
           <div class="difficulty-results-value" id="result-difficulty-value">
             <!-- result to be populated here-->
+			Awaiting Input...
           </div>
       </div>
     </div>
@@ -72,7 +87,7 @@
   <div class="row">
       <div class="column-large">
           <div class="emailview" id="emailview">
-          <img class="emailviewer" id="emailviewer" src="#"/>
+          <img class="emailviewer" id="emailviewer" src="img/viewer_upload_holding.jpg"/>
           <input type="file" id="email_upload" accept="image/gif, image/jpeg, image/png" multiple="false"/>
           </div>
       </div>
